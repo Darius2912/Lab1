@@ -38,8 +38,8 @@ public class CategoriaService {
 
     public Categoria actualizar(Long id, CategoriaRequest request) {
         Categoria categoria = buscarPorId(id);
-
         categoria.setNombre(request.getNombre());
+        categoria.setDescripcion(request.getDescripcion());
         return categoriaRepository.save(categoria);
     }
 

@@ -22,9 +22,7 @@ public class ProductoController {
     }
 
     @GetMapping
-    public List<Producto> listar(@RequestParam long id){
-        return productoService.listar();
-    }
+    public List<Producto> listar(){return productoService.listar();}
 
     @GetMapping("/{id}")
     public Producto buscarPorId(@PathVariable long id){

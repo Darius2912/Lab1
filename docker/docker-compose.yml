@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: lab1-postgres
+    environment:
+      POSTGRES_DB: lab1
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5433:5432"
+    volumes:
+      - lab1-data:/var/lib/postgresql/data
+
+volumes:
+  lab1-data:
