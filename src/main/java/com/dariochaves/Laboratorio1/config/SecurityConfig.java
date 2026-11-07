@@ -30,7 +30,9 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/login").permitAll()
+                        .requestMatchers("/auth/login", "/auth/register").permitAll()
+                        .requestMatchers("/error").permitAll()
+                        .requestMatchers("/api/usuarios/**").hasAuthority("SUPER-ADMIN-ROLE")
                         .requestMatchers(HttpMethod.GET, "/api/productos/**","/api/categorias/**").authenticated()
                         .requestMatchers(HttpMethod.POST, "/api/productos/**", "/api/categorias/**").hasAuthority("SUPER-ADMIN-ROLE")
                         .requestMatchers(HttpMethod.PUT, "/api/productos/**", "/api/categorias/**").hasAuthority("SUPER-ADMIN-ROLE")

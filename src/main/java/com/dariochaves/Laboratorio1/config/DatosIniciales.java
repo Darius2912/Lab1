@@ -2,11 +2,10 @@ package com.dariochaves.Laboratorio1.config;
 
 import com.dariochaves.Laboratorio1.repository.RoleRepository;
 import com.dariochaves.Laboratorio1.repository.UsuarioRepository;
-import com.dariochaves.Laboratorio1.entity.Usuario;
-import com.dariochaves.Laboratorio1.entity.Role;
+import com.dariochaves.Laboratorio1.model.Usuario;
+import com.dariochaves.Laboratorio1.model.Role;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

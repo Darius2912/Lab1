@@ -1,6 +1,6 @@
 package com.dariochaves.Laboratorio1.security;
 
-import com.dariochaves.Laboratorio1.entity.Usuario;
+import com.dariochaves.Laboratorio1.model.Usuario;
 import com.dariochaves.Laboratorio1.repository.UsuarioRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

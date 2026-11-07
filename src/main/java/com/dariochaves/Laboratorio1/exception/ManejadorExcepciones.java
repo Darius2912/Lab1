@@ -12,4 +12,9 @@ public class ManejadorExcepciones {
     public ResponseEntity<String> noEncontrado(RecursoNoEncontado ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
+
+    @ExceptionHandler(ConflictoException.class)
+    public ResponseEntity<String> conflicto(ConflictoException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
+    }
 }

@@ -8,6 +8,7 @@ public class ProductoRequest {
     @NotBlank
     private String nombre;
 
+    @NotBlank
     private String descripcion;
 
     @NotNull

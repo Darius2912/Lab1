@@ -1,7 +1,7 @@
 package com.dariochaves.Laboratorio1.controller;
 
 
-import com.dariochaves.Laboratorio1.entity.Producto;
+import com.dariochaves.Laboratorio1.model.Producto;
 import com.dariochaves.Laboratorio1.dto.ProductoRequest;
 import com.dariochaves.Laboratorio1.service.ProductoService;
 import jakarta.validation.Valid;

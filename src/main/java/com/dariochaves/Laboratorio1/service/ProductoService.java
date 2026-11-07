@@ -1,8 +1,8 @@
 package com.dariochaves.Laboratorio1.service;
 
 
-import com.dariochaves.Laboratorio1.entity.Categoria;
-import com.dariochaves.Laboratorio1.entity.Producto;
+import com.dariochaves.Laboratorio1.model.Categoria;
+import com.dariochaves.Laboratorio1.model.Producto;
 import com.dariochaves.Laboratorio1.dto.ProductoRequest;
 import com.dariochaves.Laboratorio1.repository.CategoriaRepository;
 import com.dariochaves.Laboratorio1.repository.ProductoRepository;

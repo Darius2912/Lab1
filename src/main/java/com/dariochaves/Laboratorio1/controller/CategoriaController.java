@@ -1,6 +1,6 @@
 package com.dariochaves.Laboratorio1.controller;
 
-import com.dariochaves.Laboratorio1.entity.Categoria;
+import com.dariochaves.Laboratorio1.model.Categoria;
 import com.dariochaves.Laboratorio1.dto.CategoriaRequest;
 import com.dariochaves.Laboratorio1.service.CategoriaService;
 import jakarta.validation.Valid;

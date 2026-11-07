@@ -1,6 +1,6 @@
 package com.dariochaves.Laboratorio1.repository;
 
-import com.dariochaves.Laboratorio1.entity.Role;
+import com.dariochaves.Laboratorio1.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

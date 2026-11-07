@@ -1,4 +1,4 @@
-package com.dariochaves.Laboratorio1.entity;
+package com.dariochaves.Laboratorio1.model;
 
 import jakarta.persistence.*;
 @Entity

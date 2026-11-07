@@ -1,9 +1,11 @@
 package com.dariochaves.Laboratorio1.service;
 
-import com.dariochaves.Laboratorio1.entity.Categoria;
+import com.dariochaves.Laboratorio1.exception.ConflictoException;
+import com.dariochaves.Laboratorio1.model.Categoria;
 import com.dariochaves.Laboratorio1.dto.CategoriaRequest;
 import com.dariochaves.Laboratorio1.repository.CategoriaRepository;
 import com.dariochaves.Laboratorio1.exception.RecursoNoEncontado;
+import com.dariochaves.Laboratorio1.repository.ProductoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +14,11 @@ import java.util.List;
 public class CategoriaService {
 
     private final CategoriaRepository categoriaRepository;
+    private final ProductoRepository productoRepository;
 
-    public CategoriaService(CategoriaRepository categoriaRepository) {
+    public CategoriaService(CategoriaRepository categoriaRepository, ProductoRepository productoRepository) {
         this.categoriaRepository = categoriaRepository;
+        this.productoRepository = productoRepository;
     }
 
     public List<Categoria> listar() {
@@ -45,6 +49,10 @@ public class CategoriaService {
 
     public void eliminar(Long id) {
         Categoria categoria = buscarPorId(id);
+
+        if (productoRepository.existsCategoriaId(id)) {
+            throw new ConflictoException("No se puede eliminar la categoría porque tiene productos asociados");
+        }
         categoriaRepository.delete(categoria);
     }
 }
