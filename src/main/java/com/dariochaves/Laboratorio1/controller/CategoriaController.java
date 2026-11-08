@@ -40,7 +40,7 @@ public class CategoriaController {
 
     @PutMapping("/{id}")
     public Categoria actualizar(@PathVariable Long id, @Valid @RequestBody CategoriaRequest request) {
-        return categoriaService.buscarPorId(id);
+        return categoriaService.actualizar(id, request);
     }
 
     @DeleteMapping("/{id}")

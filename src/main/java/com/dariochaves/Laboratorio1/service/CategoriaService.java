@@ -50,7 +50,7 @@ public class CategoriaService {
     public void eliminar(Long id) {
         Categoria categoria = buscarPorId(id);
 
-        if (productoRepository.existsCategoriaId(id)) {
+        if (productoRepository.existsByCategoriaId(id)) {
             throw new ConflictoException("No se puede eliminar la categoría porque tiene productos asociados");
         }
         categoriaRepository.delete(categoria);
